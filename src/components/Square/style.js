@@ -6,11 +6,14 @@ height: 100%;
 width: 100%;
 `
 
-export const Typography = styled.div`
+export const Typography = styled.button`
 font-family: 'Teko', sans-serif;
+background-color: ${({color}) => color} ;
 height: 100%;
 width: 100%;
-padding-top: ${({isMobile}) => isMobile ? 30 : 55 }px;
+color: white;
+border: 0px;
+padding-top: ${({isMobile}) => isMobile ? 65 : 90 }px;
 font-size: ${({isMobile}) => isMobile ? 25 : 45 }rem;
 display: flex;
 font-weight: 500;
@@ -24,13 +27,5 @@ overflow: hidden;
 -moz-user-select: none;       /* Firefox */
 -ms-user-select: none;        /* IE10+ */
 user-select: none;            /* Possível implementação no futuro */
-&:first-of-type {
-  border-right: ${({isMobile}) => isMobile ? 1 : 4 }px solid white;
-}
-@media (max-width: 768px) {
-  &:first-of-type {
-    border-bottom: 1px solid white;
-  }
-}
 `
 
